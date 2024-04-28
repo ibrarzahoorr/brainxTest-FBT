@@ -306,7 +306,7 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-
+{% render 'eg-frequently-bought-together' %}
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
