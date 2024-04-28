@@ -472,6 +472,7 @@
                         assign rating_decimal = 1
                       endif
                     %}
+                    
                     <div
                       class="rating"
                       role="img"
@@ -497,6 +498,8 @@
                       </span>
                     </p>
                   </div>
+                
+
                 {%- endif -%}
               {%- when 'complementary' -%}
                 <product-recommendations
@@ -553,6 +556,8 @@
                                   aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
                                 {% endif %}
                               >
+                                < /product-form >
+{% render 'eg-frequently-bought-together' %}
                                 <ul class="list-unstyled" role="list">
                                   {%- for product in recommendations.products
                                     limit: block.settings.products_per_page
